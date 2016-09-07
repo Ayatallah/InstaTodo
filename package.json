@@ -1,0 +1,11 @@
+{
+  "name": "instatodo",
+  "version": "1.0.0",
+  "description": "\"First AngularJs app attempt, todo app with pictures\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ayatallah Amr",
+  "license": "ISC"
+}
