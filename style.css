@@ -1,0 +1,113 @@
+#wrapper {
+	
+	margin: auto;
+	padding:0 30px;
+	width: 850px;
+	color: #4a423b;
+	font-family: Arial,sans-serif;
+	font-size: 13px;
+	margin-bottom:70px;
+	padding-top:0px;
+}
+
+.header-title{
+
+	font-family: 'Futura', 'Trebuchet MS', Arial, sans-serif;
+	font-size: 20px;
+	font-style: normal;
+	font-variant: normal;
+	text-transform: uppercase;
+	font-weight: 500;
+	letter-spacing:0.9px;
+	color: #8dc20f;
+}
+
+.nav{
+
+	padding-top: 5%;
+	padding-bottom: 4%;
+}
+
+.main{
+	border-top: 1px solid #e4e4e4;
+	border-bottom: 1px solid #e4e4e4;
+	margin-top: 2%;
+	padding-top: 5%;
+	margin-bottom: 2%;
+	padding-bottom: 5%
+}
+.slider {
+
+  	background-image:url('http://static1.squarespace.com/static/528fc8ffe4b070ad8ee97493/t/558c019ae4b08aeb04726a36/1435238813669/Ladybug+Saying+Hello%21?format=1000w');
+  	min-height: 620px;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+  	position: relative;
+}
+
+.tdtext{
+	font-family: serif;
+	font-size: 20px;
+	font-style: normal;
+	font-variant: normal;
+	text-transform: uppercase;
+	font-weight: 500;
+	letter-spacing:0.9px;
+	color: #8dc20f;
+	text-decoration: underline;	
+}
+
+.tdtext:hover{
+	color:#466107;
+}
+
+.navul{
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.description{
+	font-family: serif;
+	font-size: 14px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	letter-spacing:1.0px;
+	color: #797979;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+li a {
+    display: block;
+    color: #949494;
+    font-family: serif;
+    font-size: 16px;
+    text-align: center;
+    padding: 9px 9px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li.hover a{
+    color: #111;
+    text-decoration: none;
+}
+li.active a{
+	color:#fcac2c;
+	text-decoration: none;
+}
+
+.listimg{
+	width:100%;
+	transition: width 1s ease-in;
+	-moz-transition: width 1s ease-in;
+	-ms-transition: width 1s ease-in;
+	-o-transition: width 1s ease-in;
+	-webkit-transition: width 1s ease-in;
+}
+.listimg:hover {
+	width: 105%;
+	opacity: 0.9;
+}

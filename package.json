@@ -7,5 +7,16 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ayatallah Amr",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "angular": "1.5.6"
+},
+  "devDependencies": {
+    "browserify": "10.2.3",
+    "gulp": "3.8.11",
+    "gulp-browserify": "0.5.1",
+    "http-status": "0.1.8",
+    "underscore": "1.5.2",
+    "gulp-connect": "^2.2.0"
+  }
 }

@@ -1,0 +1,60 @@
+
+  <div id="wrapper">
+    <div class="nav">
+      <div class="pull-right" >
+        <ul class="navul">
+          <li style="float:right;" class="active">
+            <a href="#">Home</a>
+          </li>
+          <li style="float:right;">
+            <a href="#">Sign in</a>
+          </li>
+          <li style="float:right;">
+            <a href="#">Sign up</a>
+          </li>
+        </ul>
+      </div>
+      <div class="pull-left">
+        <div class="header-title">InstaTodo</div>
+        <p style="color:#9f9f9f;font-family:serif;">Make your life easier, Take notes!</p>
+      </div>
+    </div>
+    <div class="main">
+      <div class="containerx">
+        <div class="row" ng-repeat="note in notes" ng-if="$index % 3 == 0">
+          <div class="col-sm-4">
+          <div class="wrapperbox">
+            <img src={{note.url}} class="listimg">
+            <p class="description">{{note.text}}</p>
+            
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+          <div class="wrapperbox" ng-if="notes[$index + 1].url != null">
+            <img src={{notes[$index+1].url}} class="listimg">
+            <p class="description">{{notes[$index + 1].text}}</p>
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+          <div class="wrapperbox" ng-if="notes[$index + 2].url != null">
+            <img src={{notes[$index+2].url}} class="listimg">
+            <p class="description">{{notes[$index + 2].text}}</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <table style="width: 100%;">
+        <tr>
+        <td>&nbsp;&nbsp;&nbsp;</td>
+          <td style="text-align:center;" class="tdtext">
+            <a ui-sref='home' style="color:#8dc20f;">{{message}}</a>
+          </td>
+          <td>&nbsp;&nbsp;&nbsp;</td>
+        </tr>
+      </table>
+    </div>
+  </div>  
