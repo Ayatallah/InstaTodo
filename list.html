@@ -20,38 +20,53 @@
       </div>
     </div>
     <div class="main">
-      <div class="containerx">
+      
+      <div class='form' style="margin-bottom:20px;">
+      <label class="description">Add more Todos:</label>
+        <input type='text' id='todoItemText' class='inputs' ng-model='itemText' placeholder='Add an Item Description'>
+        <input type='text' id='todoItemUrl' class='inputs' ng-model='itemUrl' placeholder='Add a Photo url'>
+        <button class='inputButton' ng-click='createTodo()'> + </button>
+        <button ng-click='updateTodos()'>Clear Done</button>
+      </div>
+
         <div class="row" ng-repeat="note in notes" ng-if="$index % 3 == 0">
           <div class="col-sm-4">
           <div class="wrapperbox">
-            <img src={{note.url}} class="listimg">
-            <p class="description">{{note.text}}</p>
-            
+            <img src={{note.url}} class="listimg" ng-class="{'done':note.done}">
+            <p class="description" ng-class="{'done':note.done}">{{note.text}}</p>
+            <input type="checkbox" ng-model="note.done"/>
+             <label class="description" style="color:#8dc20f;">Done</label>
             </div>
           </div>
 
           <div class="col-sm-4">
           <div class="wrapperbox" ng-if="notes[$index + 1].url != null">
-            <img src={{notes[$index+1].url}} class="listimg">
-            <p class="description">{{notes[$index + 1].text}}</p>
+            <img src={{notes[$index+1].url}} class="listimg" ng-class="{'done':notes[$index+1].done}">
+            <p class="description">{{notes[$index+1].text}}</p>
+            <input type="checkbox" ng-model="notes[$index+1].done" ng-click='updatesTodos()'/>
+             <label class="description" style="color:#8dc20f;">Done</label>
             </div>
           </div>
 
           <div class="col-sm-4">
           <div class="wrapperbox" ng-if="notes[$index + 2].url != null">
-            <img src={{notes[$index+2].url}} class="listimg">
-            <p class="description">{{notes[$index + 2].text}}</p>
+            <img src={{notes[$index+2].url}} class="listimg" ng-class="{'done':notes[$index+2].done}">
+            <p class="description">{{notes[$index+2].text}}</p>
+            <input type="checkbox" ng-model="notes[$index+2].done"/>
+             <label class="description" style="color:#8dc20f;">Done</label>
             </div>
           </div>
 
-        </div>
+        
 
       </div>
       <table style="width: 100%;">
         <tr>
         <td>&nbsp;&nbsp;&nbsp;</td>
           <td style="text-align:center;" class="tdtext">
+          
             <a ui-sref='home' style="color:#8dc20f;">{{message}}</a>
+      
           </td>
           <td>&nbsp;&nbsp;&nbsp;</td>
         </tr>
