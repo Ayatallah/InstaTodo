@@ -3,7 +3,10 @@
     <div class="nav">
       <div class="pull-right" >
         <ul class="navul">
-          <li style="float:right;" class="active">
+         <li style="float:right;" class="active">
+            <a ui-sref='list'>Notes</a>
+          </li>
+          <li style="float:right;">
             <a href="#">Home</a>
           </li>
           <li style="float:right;">
@@ -14,11 +17,14 @@
           </li>
         </ul>
       </div>
+
       <div class="pull-left">
         <div class="header-title">InstaTodo</div>
         <p style="color:#9f9f9f;font-family:serif;">Make your life easier, Take notes!</p>
       </div>
+
     </div>
+
     <div class="main">
       
       <div class='form' style="margin-bottom:20px;">
@@ -37,39 +43,36 @@
             <input type="checkbox" ng-model="note.done"/>
              <label class="description" style="color:#8dc20f;">Done</label>
             </div>
-          </div>
+        </div>
 
-          <div class="col-sm-4">
+        <div class="col-sm-4">
           <div class="wrapperbox" ng-if="notes[$index + 1].url != null">
             <img src={{notes[$index+1].url}} class="listimg" ng-class="{'done':notes[$index+1].done}">
             <p class="description">{{notes[$index+1].text}}</p>
             <input type="checkbox" ng-model="notes[$index+1].done" ng-click='updatesTodos()'/>
              <label class="description" style="color:#8dc20f;">Done</label>
-            </div>
           </div>
+        </div>
 
-          <div class="col-sm-4">
+        <div class="col-sm-4">
           <div class="wrapperbox" ng-if="notes[$index + 2].url != null">
             <img src={{notes[$index+2].url}} class="listimg" ng-class="{'done':notes[$index+2].done}">
             <p class="description">{{notes[$index+2].text}}</p>
             <input type="checkbox" ng-model="notes[$index+2].done"/>
              <label class="description" style="color:#8dc20f;">Done</label>
-            </div>
           </div>
-
-        
-
+        </div>
       </div>
+
       <table style="width: 100%;">
         <tr>
-        <td>&nbsp;&nbsp;&nbsp;</td>
+          <td>&nbsp;&nbsp;&nbsp;</td>
           <td style="text-align:center;" class="tdtext">
-          
             <a ui-sref='home' style="color:#8dc20f;">{{message}}</a>
-      
           </td>
           <td>&nbsp;&nbsp;&nbsp;</td>
         </tr>
       </table>
+
     </div>
   </div>  

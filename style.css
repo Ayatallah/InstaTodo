@@ -90,7 +90,6 @@ li a {
     text-decoration: none;
 }
 
-/* Change the link color to #111 (black) on hover */
 li.hover a{
     color: #111;
     text-decoration: none;
@@ -102,7 +101,6 @@ li.active a{
 
 .listimg{
 	width:100%;
-	vertical-align: middle;
 	transition: width 1s ease-in;
 	-moz-transition: width 1s ease-in;
 	-ms-transition: width 1s ease-in;
@@ -119,9 +117,3 @@ li.active a{
 	opacity: 0.5;
 }
 
-.wrapperbox{
-	height: 100%;
-	display: inline-block;
-	vertical-align: middle;
-	position: relative;
-}
