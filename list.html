@@ -48,7 +48,7 @@
         <div class="col-sm-4">
           <div class="wrapperbox" ng-if="notes[$index + 1].url != null">
             <img src={{notes[$index+1].url}} class="listimg" ng-class="{'done':notes[$index+1].done}">
-            <p class="description">{{notes[$index+1].text}}</p>
+            <p class="description" ng-class="{'done':notes[$index+1].done}">{{notes[$index+1].text}}</p>
             <input type="checkbox" ng-model="notes[$index+1].done" ng-click='updatesTodos()'/>
              <label class="description" style="color:#8dc20f;">Done</label>
           </div>
@@ -57,7 +57,7 @@
         <div class="col-sm-4">
           <div class="wrapperbox" ng-if="notes[$index + 2].url != null">
             <img src={{notes[$index+2].url}} class="listimg" ng-class="{'done':notes[$index+2].done}">
-            <p class="description">{{notes[$index+2].text}}</p>
+            <p class="description" ng-class="{'done':notes[$index+2].done}">{{notes[$index+2].text}}</p>
             <input type="checkbox" ng-model="notes[$index+2].done"/>
              <label class="description" style="color:#8dc20f;">Done</label>
           </div>
