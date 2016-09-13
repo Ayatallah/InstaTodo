@@ -15,6 +15,12 @@ angular.module('TodoApp', ['ui.router'])
 		url: '/list',
 		templateUrl: 'list.html',
 		controller: 'listController'
+	})
+
+	.state('signin',{
+		url: '/signin',
+		templateUrl: 'signin.html',
+		controller: 'signinController'
 	});
 
 }]);
