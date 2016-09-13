@@ -17,6 +17,12 @@ angular.module('TodoApp', ['ui.router'])
 		controller: 'listController'
 	})
 
+	.state('signup',{
+		url: '/signup',
+		templateUrl: 'signup.html',
+		controller: 'signupController'
+	})
+
 	.state('signin',{
 		url: '/signin',
 		templateUrl: 'signin.html',
