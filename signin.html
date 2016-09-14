@@ -1,6 +1,7 @@
+<div ng-show="loggedin == true" ng-include="'loggednav.htm'"></div>
+<div ng-show="loggedin != true" ng-include="'notloggednav.htm'"></div>
 <div class='form'>
   <input type='text' id='username' class='inputs' ng-model='username' placeholder='Enter your username'>
   <input type='password' id='password' class='inputs' ng-model='password' placeholder='Enter your password'>
-  {{message}}
-  <button class='inputButton' ng-click='login()'> + </button>
+  <button class='inputButton' ng-click='login()'>Sign in</button>
 </div>

@@ -1,28 +1,6 @@
-    <div id="wrapper">
-      <div ng-show="loggedin == true" ng-include="'loggednav.htm'">
-      </div>
-      <div ng-show="loggedin != true" ng-include="'notloggednav.htm'">
-      </div>
-
-
-    <div class="main">
-      <div class="slider"></div>
-
-      <!--table style="width: 100%;">
-        <tr>
-        <td>&nbsp;&nbsp;&nbsp;</td>
-          <td style="text-align:center;" class="tdtext">
-            <a ui-sref='list' style="color:#8dc20f;">{{message}}</a>
-          </td>
-          <td>&nbsp;&nbsp;&nbsp;</td>
-        </tr>
-        
-      {{message1}}
-      {{message}}
-      
-      {{message2}}
-      </table-->
-      
-    </div>
-  </div> 
+<div ng-show="loggedin == true" ng-include="'loggednav.htm'"></div>
+<div ng-show="loggedin != true" ng-include="'notloggednav.htm'"></div>
+<div class="main">
+  <div class="slider"></div>
+</div> 
 

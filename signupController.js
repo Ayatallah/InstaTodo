@@ -1,10 +1,9 @@
 angular.module('TodoApp')
 .controller('signupController', ['$scope','$state','$rootScope',  'userService',function($scope,$state, $rootScope,userService) {
-	//localStorage.setItem('users', JSON.stringify([{'username': 'yoyo', 'password':'hahayoyo5'}]));
-	//$scope.message = "Take me back home!";
-	var tempUsers = []
+	
+	var tempUsers = [];
 	if (localStorage.getItem('users') === null) {
-		tempUsers = [{'username': 'yoyo', 'password':'hahayoyo5'} ];
+		tempUsers = [{'username': 'yoyo', 'password':'hahayoyo5'},{'username': 'ahmoda', 'password':'hahaahmoda5'} ];
 		localStorage.setItem('users', JSON.stringify(tempUsers));
 	}
 	else{
@@ -13,7 +12,6 @@ angular.module('TodoApp')
 
 	document.getElementById('username').focus();
 	document.getElementById('password').focus();
-	//$scope.message = "hello";
 	var found;
 
 	$scope.register = function() {

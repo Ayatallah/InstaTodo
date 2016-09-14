@@ -1,10 +1,9 @@
 angular.module('TodoApp')
 .controller('signinController', ['$scope','$state','$rootScope',  'userService',function($scope,$state, $rootScope,userService) {
-	//localStorage.setItem('users', JSON.stringify([{'username': 'yoyo', 'password':'hahayoyo5'}]));
-	//$scope.message = "Take me back home!";
-	var tempUsers = []
+	
+	var tempUsers = [];
 	if (localStorage.getItem('users') === null) {
-		tempUsers = [{'username': 'yoyo', 'password':'hahayoyo5'} ];
+		tempUsers = [{'username': 'yoyo', 'password':'hahayoyo5'},{'username': 'ahmoda', 'password':'hahaahmoda5'} ];
 		localStorage.setItem('users', JSON.stringify(tempUsers));
 	}
 	else{
@@ -13,7 +12,7 @@ angular.module('TodoApp')
 
 	document.getElementById('username').focus();
 	document.getElementById('password').focus();
-	//$scope.message = "hello";
+
 	var found;
 
 	$scope.login = function() {
@@ -25,7 +24,6 @@ angular.module('TodoApp')
 		};
 		
 		if (found) {
-			//$scope.message = "hey";
 			//userService.setLoggedin();
 			//userService.setCurrentUser($scope.username);
 			localStorage.setItem('currentUser', JSON.stringify($scope.username));
@@ -37,8 +35,6 @@ angular.module('TodoApp')
 	$rootScope.logout = function(){
 		localStorage.removeItem('currentUser');
 		localStorage.removeItem('loggedin');
-		//localStorage.setItem('loggedin', JSON.stringify(false));
-		//localStorage.setItem('currentUser',null);
 		if ($state.is('home')) {
 			$state.reload();
 		}
