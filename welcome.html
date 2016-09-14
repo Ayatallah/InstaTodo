@@ -1,36 +1,14 @@
-  <div id="wrapper">
-    <div class="nav">
-      <div class="pull-right" >
-        <ul class="navul">
-        <li style="float:right;">
-          <a ui-sref='list'>Notes</a>
-        </li>
-          <li style="float:right;" class="active">
-            <a href="#">Home</a>
-          </li>
-          <li style="float:right;">
-            <a ui-sref='signin'>Sign in</a>
-          </li>
-          <li style="float:right;">
-            <a ui-sref='signup'>Sign up</a>
-          </li>
-          <li style="float:right;">
-            <a href="#" ng-click="logout()">logout</a>
-          </li>
-        </ul>
+    <div id="wrapper">
+      <div ng-show="loggedin == true" ng-include="'loggednav.htm'">
+      </div>
+      <div ng-show="loggedin != true" ng-include="'notloggednav.htm'">
       </div>
 
-      <div class="pull-left">
-        <div class="header-title">InstaTodo</div>
-        <p style="color:#9f9f9f;font-family:serif;">Make your life easier, Take notes!</p>
-      </div>
-
-    </div>
 
     <div class="main">
       <div class="slider"></div>
 
-      <table style="width: 100%;">
+      <!--table style="width: 100%;">
         <tr>
         <td>&nbsp;&nbsp;&nbsp;</td>
           <td style="text-align:center;" class="tdtext">
@@ -38,7 +16,13 @@
           </td>
           <td>&nbsp;&nbsp;&nbsp;</td>
         </tr>
-      </table>
+        
+      {{message1}}
+      {{message}}
+      
+      {{message2}}
+      </table-->
       
     </div>
-  </div>  
+  </div> 
+

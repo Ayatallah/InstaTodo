@@ -1,32 +1,10 @@
 
   <div id="wrapper">
-    <div class="nav">
-      <div class="pull-right" >
-        <ul class="navul">
-         <li style="float:right;" class="active">
-            <a ui-sref='list'>Notes</a>
-          </li>
-          <li style="float:right;">
-            <a href="#">Home</a>
-          </li>
-          <li style="float:right;">
-            <a href="#">Sign in</a>
-          </li>
-          <li style="float:right;">
-            <a href="#">Sign up</a>
-          </li>
-        </ul>
+    <div ng-include="'loggednav.htm'">
       </div>
-
-      <div class="pull-left">
-        <div class="header-title">InstaTodo</div>
-        <p style="color:#9f9f9f;font-family:serif;">Make your life easier, Take notes!</p>
-      </div>
-
-    </div>
 
     <div class="main">
-      
+      {{message2}}
       <div class='form' style="margin-bottom:20px;">
       <label class="description">Add more Todos:</label>
         <input type='text' id='todoItemText' class='inputs' ng-model='itemText' placeholder='Add an Item Description'>

@@ -29,13 +29,23 @@ angular.module('TodoApp')
 			//userService.setLoggedin();
 			//userService.setCurrentUser($scope.username);
 			localStorage.setItem('currentUser', JSON.stringify($scope.username));
+			localStorage.setItem('loggedin', JSON.stringify(true));
 			$state.go('home');
 		};
 	};
 
 	$rootScope.logout = function(){
 		localStorage.removeItem('currentUser');
-		$state.reload();
+		localStorage.removeItem('loggedin');
+		//localStorage.setItem('loggedin', JSON.stringify(false));
+		//localStorage.setItem('currentUser',null);
+		if ($state.is('home')) {
+			$state.reload();
+		}
+		else{
+			$state.go('home');
+		}
+		
 		//userService.resetLoggedin();
 		//userService.resetCurrentUser();
 	}
